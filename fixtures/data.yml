@@ -1,0 +1,31 @@
+App\Entity\Address:
+  address_admin:
+    street: "15 rue de Carmen"
+    city: "Paris"
+    zipCode: "75013"
+    user: "@user_admin"
+  address_user:
+    street: "15 rue du Blabliblou"
+    city: "Paris"
+    zipCode: "75013"
+    user: "@user_user"
+
+App\Entity\User:
+  user_admin:
+    email: "admin@pizzashop.com"
+    # password: admin
+    password: \$2y\$13\$qXFkPav/gQWMuwXU1SYHw.dkecDvD4O23B7zfpHUsXAJdfRXhPswG
+    firstName: "Qoo"
+    lastName: "N."
+    phone: "0800118218"
+    roles: ["ROLE_ADMIN"]
+    address: "@address_admin"
+  user_user:
+    email: "user@pizzashop.com"
+    # password: user
+    password: \$2y\$13\$ISRDGXHb3JY4ge2bYagOOu0tJhao4.O8xOb5.DuidlFwwyeHVuBFG
+    firstname: "User"
+    lastname: "N."
+    phone: ""
+    roles: ["ROLE_USER"]
+    address: "@address_user"
