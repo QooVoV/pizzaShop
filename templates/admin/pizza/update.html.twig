@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Pizza{% endblock %}
+
+{% block main %}
+
+<h2>Modifier une pizza de la base de données</h2>
+
+{{ form(view) }}
+<button><a href="{{ path('app_admin_pizza_delete', {'id': pizza.id}) }}">Supprimer</a></button>
+
+<a href="{{ path('app_admin_home') }}">Retour à l'accueil</a>
+
+{% endblock %}

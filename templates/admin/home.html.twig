@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block main %}
+
+<h2>Page d'accueil de l'administration</h2>
+
+<a href="{{ path('app_admin_pizza_add') }}">Ajouter une nouvelle pizza</a>
+
+<a href="{{ path('app_admin_pizza_list') }}">Liste des pizzas</a>
+
+{% endblock %}

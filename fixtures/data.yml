@@ -24,8 +24,25 @@ App\Entity\User:
     email: "user@pizzashop.com"
     # password: user
     password: \$2y\$13\$ISRDGXHb3JY4ge2bYagOOu0tJhao4.O8xOb5.DuidlFwwyeHVuBFG
-    firstname: "User"
-    lastname: "N."
+    firstName: "User"
+    lastName: "N."
     phone: ""
     roles: ["ROLE_USER"]
     address: "@address_user"
+
+App\Entity\Pizza:
+  pizza_1:
+    name: "Margherita"
+    description: "La pizza italienne par excellence"
+    price: "12"
+    imageUrl: "https://cdn.pixabay.com/photo/2020/01/27/12/56/cheese-4797173_960_720.jpg"
+  pizza_2:
+    name: "Fromage"
+    description: "Pour les amoureux du fromage"
+    price: "13.5"
+    imageUrl: "https://cdn.pixabay.com/photo/2015/11/11/21/03/pizza-1039262_960_720.jpg"
+  pizza_{3..15}:
+    name: <fr_FR:word()>
+    description: <fr_FR:realText(100)>
+    price: <randomFloat(2, 9, 19)>
+    imageUrl: <imageUrl(640, 480, 'pizza', true)>

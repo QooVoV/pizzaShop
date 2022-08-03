@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Pizzas{% endblock %}
+
+{% block main %}
+
+<h2>Liste des pizzas</h2>
+
+<div>
+
+  {% for pizza in pizzas %}
+    <div>
+      <li>Id : {{ pizza.id }}</li>
+    </div>
+    <div>
+        <li>Nom : {{ pizza.name }}</li>
+    </div>
+    <div>
+        <li>Prix : {{ pizza.price }} €</li>
+    </div>
+    <div>
+      <button type="submit"><a href="{{ path('app_admin_pizza_update', {'id': pizza.id}) }}">Modifier ou Supprimer</a></button>
+    </div>
+    {% endfor %}
+
+</div>
+
+<button><a href="{{ path('app_admin_pizza_add') }}">Ajouter une nouvelle pizza</a></button>
+
+<a href="{{ path('app_admin_home') }}">Retour à l'accueil</a>
+
+
+{% endblock %}
